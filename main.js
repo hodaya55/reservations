@@ -1,53 +1,57 @@
 var reservations = {
-  'Bob': { claimed: false },
-  'Ted': { claimed: true }
+    'Bob': { claimed: false },
+    'Ted': { claimed: true }
 }
 
-var name = prompt('Please enter the name for your reservation');
+//var name = prompt('Please enter the name for your reservation');
 
 var claimReservation = function () {
 
- var exist=false;
-var array=Object.keys(reservations); // array of the keys (which are the names..)
+    var exist = false;
+    var array = Object.keys(reservations); // array of the keys (which are the names..)
+    var name = document.getElementById('idName').value;
 
- //for (var n in array)
- for(var n=0; n<array.length && !exist; n++)
-    if (array[n].toLowerCase() == name.toLowerCase())
-      { 
-         exist=true;
+    if (name === '') {
+        document.getElementById('status').innerHTML = "please enter your name";
+        return;
+    }
 
-         if (reservations[array[n]].claimed== true) // the reservation claimed
-            alert("Hi, "+name+" .Your reservation already claimed");
-  
-        else // the reservation unclaimed
-            alert("Welcome "+name);
-      }
 
-if (!exist) // if the reservation doesnt exists
-      {
-       console.log("Hi, "+ name+ " there is no reservation under your name");
-       reservations[name]= {claimed: true};
-       alert("we set new reservation for you!");
-      }
+    //for (var n = 0; n < array.length && !exist; n++)
+    for (var n in array)
+        if (array[n].toLowerCase() == name.toLowerCase()) {
+            //exist = true;
+            if (reservations[array[n]].claimed) // the reservation claimed
+                // alert("Hi, "+name+" .Your reservation already claimed");
+                document.getElementById('status').innerHTML = "Hi, " + name + " .Your reservation already claimed";
 
-  /*
-  if (reservations[name]) // if the reservation exists
-  {
-    if (reservations[name].claimed== true) // the reservation claimed
-           alert("Hi, "+name+" .Your reservation already claimed");
-         
-    else // the reservation unclaimed
-           alert("Welcome "+name);
-  }
-  else // if the reservation doesnt exists
-      { console.log("Hi, "+ name+ " there is no reservation under your name");
-       reservations[name]= {claimed: true};
-       alert("we set new reservation for you!");
-      }
-      */
-}
+            else // the reservation unclaimed
+                //alert("Welcome "+name);
+                document.getElementById('status').innerHTML = "welcome " + name;
 
-claimReservation();
+            return;
+        }
+
+    // if (!exist)
+    // if the reservation doesnt exists
+    {
+        console.log("Hi, " + name + " there is no reservation under your name");
+        reservations[name] = { claimed: true };
+        // alert(name +" ,we set new reservation for you!");
+        document.getElementById('status').innerHTML = "Hi, " + name + " there is no reservation under your name \n"
+            + ",we set new reservation for you!";
+    }
+};
+
+//claimReservation();
+document.getElementById('btnSearch').onclick = claimReservation;
+
+
+
+
+
+
+
 
 
 //example check
