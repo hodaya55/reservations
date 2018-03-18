@@ -3,33 +3,43 @@
 body{
     font-size: 17px;
     font-family: 'Arial',sans-serif;
-    background: #960322a2
+    background: #960322a2;
+    
 }
 
 .warpper {
+    
     width: 400px;
 	margin: 0 auto;
 }
 
+legend{
+    margin-left: 138px;
+}
+
 form{
-    width: 350px;
+    width: 386px;
+    padding: 40px;
 }
 
 form input{
-
-    margin-bottom: 25px;
+margin-top: 20px;
+    margin-bottom: 28px;
     font-size: 20px;
     border: 0;
     border-bottom: 3px solid rgba(0, 4,0,.7);
+    margin-left: 75px;
     
 }
 
 #btnSearch{
-    color: #fff;
-    font-weight: 800;
-    padding: 10px;
+    color: black;
+    font-weight: 900;
+    padding: 15px;
     border: 1px;
+    margin-left: 100px;
     background: linear-gradient(#fff, #aa0226);
+    border-radius: 12px;
 }
 
 #btnSearch:hover{
@@ -39,11 +49,13 @@ form input{
 h1{
     margin-bottom: 0;
     text-align: center;
+    padding-left: 80px;
 }
 
 h3{
     margin-top: 5px;
-    margin-left: 1px;
+    margin-left: 85px;
+     text-align: center;
     color: #fff;
 }
 
