@@ -1,0 +1,53 @@
+
+
+body{
+    font-size: 18px;
+    font-family: 'Arial',sans-serif;
+    background: #960322a2
+}
+
+.warpper {
+    width: 400px;
+	margin: 0 auto;
+}
+
+form{
+    width: 300px;
+}
+
+form input{
+    margin-bottom: 25px;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1.5px solid rgba(0, 4,0,.7);
+    
+}
+
+form input:focus{
+    outline: none;
+}
+
+
+
+#btnSearch{
+    color: #fff;
+    font-weight: 700;
+    padding: 10px;
+    border: 2px;
+    background: linear-gradient(#fff, #aa0226);
+}
+
+#btnSearch:hover{
+   background: linear-gradient(#aa0226,#fff);
+}
+
+h1{
+    margin-bottom: 0;
+}
+
+h3{
+    margin-top: 5px;
+    margin-left: 10px;
+    color: #fff;
+}
+
