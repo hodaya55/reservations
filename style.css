@@ -1,7 +1,7 @@
 
 
 body{
-    font-size: 18px;
+    font-size: 17px;
     font-family: 'Arial',sans-serif;
     background: #960322a2
 }
@@ -12,28 +12,23 @@ body{
 }
 
 form{
-    width: 300px;
+    width: 350px;
 }
 
 form input{
+
     margin-bottom: 25px;
     font-size: 20px;
-    border: none;
-    border-bottom: 1.5px solid rgba(0, 4,0,.7);
+    border: 0;
+    border-bottom: 3px solid rgba(0, 4,0,.7);
     
 }
 
-form input:focus{
-    outline: none;
-}
-
-
-
 #btnSearch{
     color: #fff;
-    font-weight: 700;
+    font-weight: 800;
     padding: 10px;
-    border: 2px;
+    border: 1px;
     background: linear-gradient(#fff, #aa0226);
 }
 
@@ -43,11 +38,12 @@ form input:focus{
 
 h1{
     margin-bottom: 0;
+    text-align: center;
 }
 
 h3{
     margin-top: 5px;
-    margin-left: 10px;
+    margin-left: 1px;
     color: #fff;
 }
 
